@@ -17,25 +17,40 @@ public class A6Q3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+           //creating a temporary variable to allow the conversion of integers later on for ascending order
+        int temp;
+
         // create a scanner for user input
-        Scanner input = new Scanner (System.in); 
-        
+        Scanner input = new Scanner(System.in);
+
         //create a list of two numbers
-        int [] number = new int [2];
+        int[] A = new int[2];
+
+        // scanning in user's integers
+        System.out.println("Please eneter two integers: ");
+        for (int i = 0; i < A.length; i++) {
+            A[i] = input.nextInt();
+        }
         
-       
-        System.out.println("Please enter in two integers: ");
-        
-         for (int i = 0; i < number.length; i ++){
-            number [i] = input.nextInt();
-        
-             System.out.println("The integers in ascending order are: ");
-            if  (number[i] < number[i]) {
-                System.out.print(number[i] + number[i] + " ");
-        
-        
-    }
-}
+        // loop to rearrange the variables in ascending order
+        for (int i = 0; i < A.length; i++) {
+            //
+            for (int n = i + 1; n < A.length; n++) {
+                if (A[i] > A[n]) {
+                    temp = A[i];
+                    A[i] = A[n];
+                    A[n] = temp;
+
+                }
+
+            }
+        }
+
+        // 
+        System.out.println("Ascending Order:");
+        for (int i = 0; i < A.length; i++) {
+            System.out.println(A[i]);
+        }
     }
 }
 

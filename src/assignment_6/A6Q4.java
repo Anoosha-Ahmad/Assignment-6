@@ -16,33 +16,33 @@ public class A6Q4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic herE
-        //input scanner for user input
-        Scanner input = new Scanner (System.in);
         
-        // create a temporary variable 
-        int temp;
-        
-        // create a list of 10 numbers 
-        int [] marks = new int [10];
-        
-        //ask user to input their marks
+         // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+
+        int[] A = new int[10];
+
         System.out.println("Please enter in your marks:");
-        for (int i=0; i < marks.length; i++){
-            marks [i] = input.nextInt();
+        for (int x = 0; x < A.length; x++) {
+            A[x] = input.nextInt();
         }
-            
-        // create a loop
-        
-        
-//         if (marks[i - 1] >  marks [i]) {
-//             temp = marks[i + 1];
-//             marks [i+1] =  marks [i];
-//             marks [i] = temp;
-         }       
-            
-       
-        }    
+        int remaining = A.length - 1;
+        for (int x = 0; x < (A.length - 1); x++) {
+            for (int y = 0; y < (remaining); y++) {
+                int temp;
+                if (A[y] > A[y + 1]) {
+                    temp = A[y + 1];
+                    A[y + 1] = A[y];
+                    A[y] = temp;
+
+                }
+            }
+            remaining--;
+        }
+        System.out.println("In ascending order:");
+        for (int x = 0; x < A.length; x++) {
+            System.out.println(A[x]);
+        }
     }
 }
 

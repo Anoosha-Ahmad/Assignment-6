@@ -56,6 +56,17 @@ public class A6Q2 {
 
 
 
-
+////e median = 0;
+//    double mid=0;
+//    if(num_value%2 == 0)
+//    {
+//    int temp=(num_value/2)-1;
+//    for(int i=0;i<num_value;i++)
+//    {
+//    if(temp==i || (temp+1)==i)
+//    {
+//    mid=mid+invalue[i];
     }
-}
+    }
+    
+
